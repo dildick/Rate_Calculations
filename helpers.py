@@ -4,7 +4,7 @@ zMax = [5.5,6.7,6.8,8,8,9,9,10,10]
 rMin = [1.0,2.5,4.7,1.4,3.5,1.6,3.5,1.8,3.5]
 rMax = [2.8,4.5,6.8,3.5,7.0,3.5,7.0,3.5,7.0]
 
-samples = {
+signal_samples = {
     'HTo2LongLivedTo4b_MH_1000_MFF_450_CTau_100000mm' :
     'HTo2LongLivedTo4b_MH-1000_MFF-450_CTau-100000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_1000_MFF_450_CTau_100000mm_ANA_20210226_v1/210226_164436/0000/',
 
@@ -73,7 +73,9 @@ samples = {
 
     'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_5000mm' :
     'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_5000mm_TuneCP5_14TeV_pythia/crab_HTo2LongLivedTo4q_MH_125_MFF_1_CTau_5000mm_ANA_20210225_v3/210225_230510/0000/',
+}
 
+data_samples = {
     'ZeroBias_2018D_0000' :
     'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210225_v3/210225_230653/0000/',
 
@@ -97,6 +99,12 @@ samples = {
 
     'ZeroBias_2018D_0007' :
     'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210225_v3/210225_230653/0007/'
+}
+
+test_sample = {
+    'Test' :
+'root://cmseos.fnal.gov//store/user/dildick/HTo2LongLivedTo4q_MH_125_MFF_1_CTau_1000mm_TuneCP5_14TeV_pythia/crab_HTo2LongLivedTo4q_MH_125_MFF_1_CTau_1000mm_ANA_20210226_v2/210227_042502/0000/'
+#'/uscms/home/dildick/nobackup/work/LLPStudiesWithSergoEtAL/CMSSW_11_1_0_pre6/src/'
 }
 
 def timeBinChoice(TimeChoice):

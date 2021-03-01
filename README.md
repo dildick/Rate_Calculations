@@ -41,3 +41,16 @@ Select background file in "F1" and select as many signal files as you'd like to 
 The program will create plots showing the distribution of max hits for each station/ring.
 
 
+# To run notebook on LPC:
+
+
+On LPC
+```
+jupyter notebook --no-browser --port=8887
+```
+
+On local machine
+```
+ssh -N -L localhost:8888:localhost:8887 $FNALLPCUSER@cmslpc-sl7.fnal.gov
+Open in browser: http://localhost:8888/
+```

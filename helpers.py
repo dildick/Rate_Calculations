@@ -4,101 +4,109 @@ zMax = [5.5,6.7,6.8,8,8,9,9,10,10]
 rMin = [1.0,2.5,4.7,1.4,3.5,1.6,3.5,1.8,3.5]
 rMax = [2.8,4.5,6.8,3.5,7.0,3.5,7.0,3.5,7.0]
 
+
 signal_samples = {
     'HTo2LongLivedTo4b_MH_1000_MFF_450_CTau_100000mm' :
-    'HTo2LongLivedTo4b_MH-1000_MFF-450_CTau-100000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_1000_MFF_450_CTau_100000mm_ANA_20210226_v1/210226_164436/0000/',
+    'HTo2LongLivedTo4b_MH-1000_MFF-450_CTau-100000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_1000_MFF_450_CTau_100000mm_ANA_20210226_v2/210227_043020/0000/',
 
     'HTo2LongLivedTo4b_MH_1000_MFF_450_CTau_10000mm' :
-    'HTo2LongLivedTo4b_MH-1000_MFF-450_CTau-10000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_1000_MFF_450_CTau_10000mm_ANA_20210226_v1/210226_164447/0000/',
+    'HTo2LongLivedTo4b_MH-1000_MFF-450_CTau-10000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_1000_MFF_450_CTau_10000mm_ANA_20210226_v2/210227_043029/0000/',
+
 
     'HTo2LongLivedTo4b_MH_125_MFF_12_CTau_9000mm' :
-    'HTo2LongLivedTo4b_MH-125_MFF-12_CTau-9000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_12_CTau_9000mm_ANA_20210226_v1/210226_164456/0000/',
+    'HTo2LongLivedTo4b_MH-125_MFF-12_CTau-9000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_12_CTau_9000mm_ANA_20210226_v2/210227_043039/0000/',
 
     'HTo2LongLivedTo4b_MH_125_MFF_12_CTau_900mm' :
-    'HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_12_CTau_900mm_ANA_20210226_v1/210226_164507/0000/',
+    'HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_12_CTau_900mm_ANA_20210226_v2/210227_043051/0000/',
 
     'HTo2LongLivedTo4b_MH_125_MFF_25_CTau_15000mm' :
-    'HTo2LongLivedTo4b_MH-125_MFF-25_CTau-15000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_25_CTau_15000mm_ANA_20210226_v1/210226_164517/0000/',
+    'HTo2LongLivedTo4b_MH-125_MFF-25_CTau-15000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_25_CTau_15000mm_ANA_20210226_v2/210227_043101/0000/',
 
     'HTo2LongLivedTo4b_MH_125_MFF_25_CTau_1500mm' :
-    'HTo2LongLivedTo4b_MH-125_MFF-25_CTau-1500mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_25_CTau_1500mm_ANA_20210226_v1/210226_164526/0000/',
+    'HTo2LongLivedTo4b_MH-125_MFF-25_CTau-1500mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_25_CTau_1500mm_ANA_20210226_v2/210227_043111/0000/',
 
     'HTo2LongLivedTo4b_MH_125_MFF_50_CTau_30000mm' :
-    'HTo2LongLivedTo4b_MH-125_MFF-50_CTau-30000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_50_CTau_30000mm_ANA_20210226_v1/210226_164536/0000/',
+    'HTo2LongLivedTo4b_MH-125_MFF-50_CTau-30000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_50_CTau_30000mm_ANA_20210226_v2/210227_043122/0000/',
 
     'HTo2LongLivedTo4b_MH_125_MFF_50_CTau_3000mm' :
-    'HTo2LongLivedTo4b_MH-125_MFF-50_CTau-3000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_50_CTau_3000mm_ANA_20210226_v1/210226_164546/0000/',
+    'HTo2LongLivedTo4b_MH-125_MFF-50_CTau-3000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_50_CTau_3000mm_ANA_20210226_v2/210227_043132/0000/',
+
 
     'HTo2LongLivedTo4b_MH_250_MFF_120_CTau_1000mm' :
-    'HTo2LongLivedTo4b_MH-250_MFF-120_CTau-10000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_120_CTau_10000mm_ANA_20210226_v1/210226_164555/0000/',
+    'HTo2LongLivedTo4b_MH-250_MFF-120_CTau-10000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_120_CTau_10000mm_ANA_20210226_v2/210227_043143/0000/',
 
     'HTo2LongLivedTo4b_MH_250_MFF_120_CTau_1000mm' :
-    'HTo2LongLivedTo4b_MH-250_MFF-120_CTau-1000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_120_CTau_1000mm_ANA_20210226_v1/210226_164605/0000/',
+    'HTo2LongLivedTo4b_MH-250_MFF-120_CTau-1000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_120_CTau_1000mm_ANA_20210226_v2/210227_043154/0000/',
 
     'HTo2LongLivedTo4b_MH_250_MFF_120_CTau_500mm' :
-    'HTo2LongLivedTo4b_MH-250_MFF-120_CTau-500mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_120_CTau_500mm_ANA_20210226_v1/210226_164614/0000/',
+    'HTo2LongLivedTo4b_MH-250_MFF-120_CTau-500mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_120_CTau_500mm_ANA_20210226_v2/210227_043204/0000/',
 
     'HTo2LongLivedTo4b_MH_250_MFF_60_CTau_10000mm' :
-    'HTo2LongLivedTo4b_MH-250_MFF-60_CTau-10000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_60_CTau_10000mm_ANA_20210226_v1/210226_164625/0000/',
+    'HTo2LongLivedTo4b_MH-250_MFF-60_CTau-10000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_60_CTau_10000mm_ANA_20210226_v2/210227_043217/0000/',
 
     'HTo2LongLivedTo4b_MH_250_MFF_60_CTau_1000mm' :
-    'HTo2LongLivedTo4b_MH-250_MFF-60_CTau-1000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_60_CTau_1000mm_ANA_20210226_v1/210226_164634/0000/',
+    'HTo2LongLivedTo4b_MH-250_MFF-60_CTau-1000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_60_CTau_1000mm_ANA_20210226_v2/210227_043229/0000/',
 
     'HTo2LongLivedTo4b_MH_250_MFF_60_CTau_500mm' :
-    'HTo2LongLivedTo4b_MH-250_MFF-60_CTau-500mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_60_CTau_500mm_ANA_20210226_v1/210226_164644/0000/',
+    'HTo2LongLivedTo4b_MH-250_MFF-60_CTau-500mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_60_CTau_500mm_ANA_20210226_v2/210227_043239/0000/',
+
 
     'HTo2LongLivedTo4b_MH_350_MFF_160_CTau_10000mm' :
-    'HTo2LongLivedTo4b_MH-350_MFF-160_CTau-10000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_160_CTau_10000mm_ANA_20210226_v1/210226_164653/0000/',
+    'HTo2LongLivedTo4b_MH-350_MFF-160_CTau-10000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_160_CTau_10000mm_ANA_20210226_v2/210227_043251/0000/',
 
     'HTo2LongLivedTo4b_MH_350_MFF_160_CTau_1000mm' :
-    'HTo2LongLivedTo4b_MH-350_MFF-160_CTau-1000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_160_CTau_1000mm_ANA_20210226_v1/210226_164702/0000/',
+    'HTo2LongLivedTo4b_MH-350_MFF-160_CTau-1000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_160_CTau_1000mm_ANA_20210226_v2/210227_043301/0000/',
 
-    'HTo2LongLivedTo4b_MH_350_MFF_160_CTau_5000mm' :
-    'HTo2LongLivedTo4b_MH-350_MFF-160_CTau-500mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_160_CTau_5000mm_ANA_20210226_v1/210226_164712/0000/',
+    ## this is 500, not 5000!
+    'HTo2LongLivedTo4b_MH_350_MFF_160_CTau_500mm' :
+    'HTo2LongLivedTo4b_MH-350_MFF-160_CTau-500mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_160_CTau_5000mm_ANA_20210226_v2/210227_043311/0000/',
 
-    'HTo2LongLivedTo4b_MH_350_MFF_80_CTau_10000mm' :
-    'HTo2LongLivedTo4b_MH-350_MFF-80_CTau-10000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_80_CTau_10000mm_ANA_20210226_v1/210226_164721/0000/',
+    ## this failed for ANA_20210226_v2
+    #'HTo2LongLivedTo4b_MH_350_MFF_80_CTau_10000mm' :
+
 
     'HTo2LongLivedTo4b_MH_350_MFF_80_CTau_1000mm' :
-    'HTo2LongLivedTo4b_MH-350_MFF-80_CTau-1000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_80_CTau_1000mm_ANA_20210226_v1/210226_164732/0000/',
+    'HTo2LongLivedTo4b_MH-350_MFF-80_CTau-1000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_80_CTau_1000mm_ANA_20210226_v2/210227_043331/0000/',
 
     'HTo2LongLivedTo4b_MH_350_MFF_80_CTau_500mm' :
-    'HTo2LongLivedTo4b_MH-350_MFF-80_CTau-500mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_80_CTau_500mm_ANA_20210226_v1/210226_164742/0000/',
+    'HTo2LongLivedTo4b_MH-350_MFF-80_CTau-500mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_80_CTau_500mm_ANA_20210226_v2/210227_043342/0000/',
+
 
     'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_10000mm' :
-    'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_10000mm_TuneCP5_14TeV_pythia/crab_HTo2LongLivedTo4q_MH_125_MFF_1_CTau_10000mm_ANA_20210225_v3/210225_230449/0000/',
+    'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_10000mm_TuneCP5_14TeV_pythia/crab_HTo2LongLivedTo4q_MH_125_MFF_1_CTau_10000mm_ANA_20210226_v2/210227_042450/0000/',
 
     'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_1000mm' :
-    'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_1000mm_TuneCP5_14TeV_pythia/crab_HTo2LongLivedTo4q_MH_125_MFF_1_CTau_1000mm_ANA_20210225_v3/210225_230459/0000/',
+    'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_1000mm_TuneCP5_14TeV_pythia/crab_HTo2LongLivedTo4q_MH_125_MFF_1_CTau_1000mm_ANA_20210226_v2/210227_042502/0000/',
 
-    'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_5000mm' :
-    'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_5000mm_TuneCP5_14TeV_pythia/crab_HTo2LongLivedTo4q_MH_125_MFF_1_CTau_5000mm_ANA_20210225_v3/210225_230510/0000/',
+    # This failed for ANA_20210226_v2
+    #'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_5000mm' :
 }
+
 
 data_samples = {
     'ZeroBias_2018D_0000' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210225_v3/210225_230653/0000/',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0000',
 
     'ZeroBias_2018D_0001' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210225_v3/210225_230653/0001/',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0001',
 
     'ZeroBias_2018D_0002' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210225_v3/210225_230653/0002/',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0002',
 
     'ZeroBias_2018D_0003' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210225_v3/210225_230653/0003/',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0003',
 
     'ZeroBias_2018D_0004' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210225_v3/210225_230653/0004/',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0004',
 
     'ZeroBias_2018D_0005' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210225_v3/210225_230653/0005/',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0005',
 
     'ZeroBias_2018D_0006' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210225_v3/210225_230653/0006/',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0006',
 
     'ZeroBias_2018D_0007' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210225_v3/210225_230653/0007/'
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0007'
 }
 
 test_sample = {

@@ -181,23 +181,38 @@ for inc in range(len(comp_var)):
     print "-----------------------------------------------------------------------"
     compXX[inc] = best_cut+1
 
-efficiency_comp_final = len(comp_sig[(comp_sig['Ev_max_nComp_ME11'] > compXX[0]) | (comp_sig['Ev_max_nComp_ME12'] > compXX[1]) | (comp_sig['Ev_max_nComp_ME13'] > compXX[2]) |
-                           (comp_sig['Ev_max_nComp_ME21'] > compXX[3]) | (comp_sig['Ev_max_nComp_ME22'] > compXX[4]) |
-                           (comp_sig['Ev_max_nComp_ME31'] > compXX[5]) | (comp_sig['Ev_max_nComp_ME32'] > compXX[6]) |
-                           (comp_sig['Ev_max_nComp_ME41'] > compXX[7]) | (comp_sig['Ev_max_nComp_ME41'] > compXX[8])])/comp_sig_tot*100
+efficiency_comp_final = len(comp_sig[(comp_sig['Ev_max_nComp_ME11'] > compXX[0]) |
+                                     (comp_sig['Ev_max_nComp_ME12'] > compXX[1]) |
+                                     (comp_sig['Ev_max_nComp_ME13'] > compXX[2]) |
+                                     (comp_sig['Ev_max_nComp_ME21'] > compXX[3]) |
+                                     (comp_sig['Ev_max_nComp_ME22'] > compXX[4]) |
+                                     (comp_sig['Ev_max_nComp_ME31'] > compXX[5]) |
+                                     (comp_sig['Ev_max_nComp_ME32'] > compXX[6]) |
+                                     (comp_sig['Ev_max_nComp_ME41'] > compXX[7]) |
+                                     (comp_sig['Ev_max_nComp_ME41'] > compXX[8])])/comp_sig_tot*100
 
-rate_comp_final       = len(comp_bkg[(comp_bkg['Ev_max_nComp_ME11'] > compXX[0]) | (comp_bkg['Ev_max_nComp_ME12'] > compXX[1]) | (comp_bkg['Ev_max_nComp_ME13'] > compXX[2]) |
-                           (comp_bkg['Ev_max_nComp_ME21'] > compXX[3]) | (comp_bkg['Ev_max_nComp_ME22'] > compXX[4]) |
-                           (comp_bkg['Ev_max_nComp_ME31'] > compXX[5]) | (comp_bkg['Ev_max_nComp_ME32'] > compXX[6]) |
-                           (comp_bkg['Ev_max_nComp_ME41'] > compXX[7]) | (comp_bkg['Ev_max_nComp_ME42'] > compXX[8])])/comp_bkg_tot*30*1000
+rate_comp_final       = len(comp_bkg[(comp_bkg['Ev_max_nComp_ME11'] > compXX[0]) |
+                                     (comp_bkg['Ev_max_nComp_ME12'] > compXX[1]) |
+                                     (comp_bkg['Ev_max_nComp_ME13'] > compXX[2]) |
+                                     (comp_bkg['Ev_max_nComp_ME21'] > compXX[3]) |
+                                     (comp_bkg['Ev_max_nComp_ME22'] > compXX[4]) |
+                                     (comp_bkg['Ev_max_nComp_ME31'] > compXX[5]) |
+                                     (comp_bkg['Ev_max_nComp_ME32'] > compXX[6]) |
+                                     (comp_bkg['Ev_max_nComp_ME41'] > compXX[7]) |
+                                     (comp_bkg['Ev_max_nComp_ME42'] > compXX[8])])/comp_bkg_tot*30*1000
 
 print "Combined Result:"
 print "rate =", rate_comp_final, "kHz, efficiency =", efficiency_comp_final, "%"
 
-rate_num_final       = len(comp_bkg[(comp_bkg['Ev_max_nComp_ME11'] > compXX[0]) | (comp_bkg['Ev_max_nComp_ME12'] > compXX[1]) | (comp_bkg['Ev_max_nComp_ME13'] > compXX[2]) |
-                           (comp_bkg['Ev_max_nComp_ME21'] > compXX[3]) | (comp_bkg['Ev_max_nComp_ME22'] > compXX[4]) |
-                           (comp_bkg['Ev_max_nComp_ME31'] > compXX[5]) | (comp_bkg['Ev_max_nComp_ME32'] > compXX[6]) |
-                           (comp_bkg['Ev_max_nComp_ME41'] > compXX[7]) | (comp_bkg['Ev_max_nComp_ME42'] > compXX[8])])
+rate_num_final       = len(comp_bkg[(comp_bkg['Ev_max_nComp_ME11'] > compXX[0]) |
+                                    (comp_bkg['Ev_max_nComp_ME12'] > compXX[1]) |
+                                    (comp_bkg['Ev_max_nComp_ME13'] > compXX[2]) |
+                                    (comp_bkg['Ev_max_nComp_ME21'] > compXX[3]) |
+                                    (comp_bkg['Ev_max_nComp_ME22'] > compXX[4]) |
+                                    (comp_bkg['Ev_max_nComp_ME31'] > compXX[5]) |
+                                    (comp_bkg['Ev_max_nComp_ME32'] > compXX[6]) |
+                                    (comp_bkg['Ev_max_nComp_ME41'] > compXX[7]) |
+                                    (comp_bkg['Ev_max_nComp_ME42'] > compXX[8])])
 
 print "Number of events that pass:", rate_num_final, " out of", comp_bkg_tot
 
@@ -235,23 +250,38 @@ for inc in range(len(wire_var)):
     print "-----------------------------------------------------------------------"
     wireXX[inc] = best_cut+1
 
-efficiency_wire_final = len(wire_sig[(wire_sig['Ev_max_nWire_ME11'] > wireXX[0]) | (wire_sig['Ev_max_nWire_ME12'] > wireXX[1]) | (wire_sig['Ev_max_nWire_ME13'] > wireXX[2]) |
-                           (wire_sig['Ev_max_nWire_ME21'] > wireXX[3]) | (wire_sig['Ev_max_nWire_ME22'] > wireXX[4]) |
-                           (wire_sig['Ev_max_nWire_ME31'] > wireXX[5]) | (wire_sig['Ev_max_nWire_ME32'] > wireXX[6]) |
-                           (wire_sig['Ev_max_nWire_ME41'] > wireXX[7]) | (wire_sig['Ev_max_nWire_ME41'] > wireXX[8])])/wire_sig_tot*100
+efficiency_wire_final = len(wire_sig[(wire_sig['Ev_max_nWire_ME11'] > wireXX[0]) |
+                                     (wire_sig['Ev_max_nWire_ME12'] > wireXX[1]) |
+                                     (wire_sig['Ev_max_nWire_ME13'] > wireXX[2]) |
+                                     (wire_sig['Ev_max_nWire_ME21'] > wireXX[3]) |
+                                     (wire_sig['Ev_max_nWire_ME22'] > wireXX[4]) |
+                                     (wire_sig['Ev_max_nWire_ME31'] > wireXX[5]) |
+                                     (wire_sig['Ev_max_nWire_ME32'] > wireXX[6]) |
+                                     (wire_sig['Ev_max_nWire_ME41'] > wireXX[7]) |
+                                     (wire_sig['Ev_max_nWire_ME41'] > wireXX[8])])/wire_sig_tot*100
 
-rate_wire_final       = len(wire_bkg[(wire_bkg['Ev_max_nWire_ME11'] > wireXX[0]) | (wire_bkg['Ev_max_nWire_ME12'] > wireXX[1]) | (wire_bkg['Ev_max_nWire_ME13'] > wireXX[2]) |
-                           (wire_bkg['Ev_max_nWire_ME21'] > wireXX[3]) | (wire_bkg['Ev_max_nWire_ME22'] > wireXX[4]) |
-                           (wire_bkg['Ev_max_nWire_ME31'] > wireXX[5]) | (wire_bkg['Ev_max_nWire_ME32'] > wireXX[6]) |
-                           (wire_bkg['Ev_max_nWire_ME41'] > wireXX[7]) | (wire_bkg['Ev_max_nWire_ME42'] > wireXX[8])])/wire_bkg_tot*30*1000
+rate_wire_final       = len(wire_bkg[(wire_bkg['Ev_max_nWire_ME11'] > wireXX[0]) |
+                                     (wire_bkg['Ev_max_nWire_ME12'] > wireXX[1]) |
+                                     (wire_bkg['Ev_max_nWire_ME13'] > wireXX[2]) |
+                                     (wire_bkg['Ev_max_nWire_ME21'] > wireXX[3]) |
+                                     (wire_bkg['Ev_max_nWire_ME22'] > wireXX[4]) |
+                                     (wire_bkg['Ev_max_nWire_ME31'] > wireXX[5]) |
+                                     (wire_bkg['Ev_max_nWire_ME32'] > wireXX[6]) |
+                                     (wire_bkg['Ev_max_nWire_ME41'] > wireXX[7]) |
+                                     (wire_bkg['Ev_max_nWire_ME42'] > wireXX[8])])/wire_bkg_tot*30*1000
 
 print "Combined Result:"
 print "rate =", rate_wire_final, "kHz, efficiency =", efficiency_wire_final, "%"
 
-rate_num_final       = len(wire_bkg[(wire_bkg['Ev_max_nWire_ME11'] > wireXX[0]) | (wire_bkg['Ev_max_nWire_ME12'] > wireXX[1]) | (wire_bkg['Ev_max_nWire_ME13'] > wireXX[2]) |
-                           (wire_bkg['Ev_max_nWire_ME21'] > wireXX[3]) | (wire_bkg['Ev_max_nWire_ME22'] > wireXX[4]) |
-                           (wire_bkg['Ev_max_nWire_ME31'] > wireXX[5]) | (wire_bkg['Ev_max_nWire_ME32'] > wireXX[6]) |
-                           (wire_bkg['Ev_max_nWire_ME41'] > wireXX[7]) | (wire_bkg['Ev_max_nWire_ME42'] > wireXX[8])])
+rate_num_final       = len(wire_bkg[(wire_bkg['Ev_max_nWire_ME11'] > wireXX[0]) |
+                                    (wire_bkg['Ev_max_nWire_ME12'] > wireXX[1]) |
+                                    (wire_bkg['Ev_max_nWire_ME13'] > wireXX[2]) |
+                                    (wire_bkg['Ev_max_nWire_ME21'] > wireXX[3]) |
+                                    (wire_bkg['Ev_max_nWire_ME22'] > wireXX[4]) |
+                                    (wire_bkg['Ev_max_nWire_ME31'] > wireXX[5]) |
+                                    (wire_bkg['Ev_max_nWire_ME32'] > wireXX[6]) |
+                                    (wire_bkg['Ev_max_nWire_ME41'] > wireXX[7]) |
+                                    (wire_bkg['Ev_max_nWire_ME42'] > wireXX[8])])
 
 print "Number of events that pass:", rate_num_final, " out of", wire_bkg_tot
 

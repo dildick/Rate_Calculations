@@ -61,9 +61,9 @@ signal_samples = {
     'HTo2LongLivedTo4b_MH_350_MFF_160_CTau_500mm' :
     'HTo2LongLivedTo4b_MH-350_MFF-160_CTau-500mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_160_CTau_5000mm_ANA_20210226_v2/210227_043311/0000/',
 
-    ## this failed for ANA_20210226_v2
-    #'HTo2LongLivedTo4b_MH_350_MFF_80_CTau_10000mm' :
 
+    'HTo2LongLivedTo4b_MH_350_MFF_80_CTau_10000mm' :
+    'HTo2LongLivedTo4b_MH-350_MFF-80_CTau-10000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_80_CTau_10000mm_ANA_20210226_v2/210301_211628/0000/',
 
     'HTo2LongLivedTo4b_MH_350_MFF_80_CTau_1000mm' :
     'HTo2LongLivedTo4b_MH-350_MFF-80_CTau-1000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_350_MFF_80_CTau_1000mm_ANA_20210226_v2/210227_043331/0000/',
@@ -78,8 +78,8 @@ signal_samples = {
     'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_1000mm' :
     'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_1000mm_TuneCP5_14TeV_pythia/crab_HTo2LongLivedTo4q_MH_125_MFF_1_CTau_1000mm_ANA_20210226_v2/210227_042502/0000/',
 
-    # This failed for ANA_20210226_v2
-    #'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_5000mm' :
+    'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_5000mm' :
+    'HTo2LongLivedTo4q_MH_125_MFF_1_CTau_5000mm_TuneCP5_14TeV_pythia/crab_HTo2LongLivedTo4q_MH_125_MFF_1_CTau_5000mm_ANA_20210226_v2/210301_211644/0000/'
 }
 
 

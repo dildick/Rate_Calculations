@@ -6,6 +6,7 @@ from tqdm import tqdm
 import numpy as np
 from helpers import signal_samples, data_samples, timeBinChoice, test_sample, get_R
 from optparse import OptionParser
+
 parser = OptionParser()
 parser.add_option("-s", dest="sampleChoice",  type=int, default=0, help='0:signal; 1: data')
 (options,args) = parser.parse_args()
@@ -109,9 +110,14 @@ def processSingleSample(dataset, sample_dict, runTest=False):
         alctChain.Add(directory + "TPEHists*.root")
         clctChain.Add(directory + "TPEHists*.root")
     else:
-        llpChain.Add(directory + "TPEHists_data_10*.root")
-        alctChain.Add(directory + "TPEHists_data_10*.root")
-        clctChain.Add(directory + "TPEHists_data_10*.root")
+        if MC:
+            llpChain.Add(directory + "TPEHists*.root")
+            alctChain.Add(directory + "TPEHists*.root")
+            clctChain.Add(directory + "TPEHists*.root")
+        else:
+            llpChain.Add(directory + "TPEHists_data_10*.root")
+            alctChain.Add(directory + "TPEHists_data_10*.root")
+            clctChain.Add(directory + "TPEHists_data_10*.root")
 
     print("Entries in ALCT Chain", alctChain.GetEntries())
     print("Entries in CLCT Chain", clctChain.GetEntries())

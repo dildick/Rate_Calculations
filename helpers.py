@@ -32,7 +32,7 @@ signal_samples = {
     'HTo2LongLivedTo4b_MH-125_MFF-50_CTau-3000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_125_MFF_50_CTau_3000mm_ANA_20210226_v2/210227_043132/0000/',
 
 
-    'HTo2LongLivedTo4b_MH_250_MFF_120_CTau_1000mm' :
+    'HTo2LongLivedTo4b_MH_250_MFF_120_CTau_10000mm' :
     'HTo2LongLivedTo4b_MH-250_MFF-120_CTau-10000mm_TuneCP5_14TeV_pythia8/crab_HTo2LongLivedTo4b_MH_250_MFF_120_CTau_10000mm_ANA_20210226_v2/210227_043143/0000/',
 
     'HTo2LongLivedTo4b_MH_250_MFF_120_CTau_1000mm' :

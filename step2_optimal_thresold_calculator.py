@@ -12,13 +12,14 @@ display(HTML("<style>.container { width:100% !important; }</style>"))
 
 from optparse import OptionParser
 parser = OptionParser()
-parser.add_option("-s", dest="inputDirectory",  type=str, default="trees_TimeChoice3", help='directory where the files are located')
+parser.add_option("-t", dest="timeChoice",  type=int, default=3, help='0 through 6')
+parser.add_option("-l", dest="showerChoice",  type=int, default=1, help='0:loose; 1:nominal; 2:tight')
 (options,args) = parser.parse_args()
 
 normalize = False
 hard_cuts = False
 
-in_dir = options.inputDirectory + "/"
+in_dir = "trees_TimeChoice" + str(options.timeChoice) + "/"
 
 input_bkg = [in_dir + 'MaxDigis_tree_ZeroBias_2018D.root']
 
@@ -114,8 +115,24 @@ min_=0
 max_=150
 it_=1
 
-r1=3*2/2
-r2=4*3/3
+
+## choice of shower
+r1=1
+r2=1
+
+# loose
+if options.showerChoice == 0:
+    r1=3
+    r2=4
+# nominal
+elif options.showerChoice == 1:
+    r1=2
+    r2=3
+# tight
+elif options.showerChoice == 2:
+    r1=1
+    r2=2
+
 r = [r1,r2,r2,r1,r2,r1,r2,r1,r2]
 
 l1=.12

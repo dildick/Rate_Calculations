@@ -9,13 +9,11 @@ from optparse import OptionParser
 
 parser = OptionParser()
 parser.add_option("-s", dest="sampleChoice",  type=int, default=0, help='0:signal; 1: data')
+parser.add_option("-t", dest="timeChoice",  type=int, default=3, help='0 through 6')
 (options,args) = parser.parse_args()
 
+TimeChoice = options.timeChoice
 
-## 0 through 6
-TimeChoice = 3
-good_times_ano, good_times_cat = timeBinChoice(TimeChoice)
-print("TimeBinChoice Anode", good_times_ano, "Cathode", good_times_cat)
 box = False
 #Setting box=True will only consider signal events that decay right in front of a chamber to be in acceptance
 

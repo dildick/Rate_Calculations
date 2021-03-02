@@ -85,28 +85,28 @@ signal_samples = {
 
 data_samples = {
     'ZeroBias_2018D_0000' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0000',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0000/',
 
     'ZeroBias_2018D_0001' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0001',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0001/',
 
     'ZeroBias_2018D_0002' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0002',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0002/',
 
     'ZeroBias_2018D_0003' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0003',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0003/',
 
     'ZeroBias_2018D_0004' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0004',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0004/',
 
     'ZeroBias_2018D_0005' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0005',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0005/',
 
     'ZeroBias_2018D_0006' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0006',
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0006/',
 
     'ZeroBias_2018D_0007' :
-    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0007'
+    'ZeroBias/crab_ZeroBias_Run2018D_ANA_20210226_v2/210227_043750/0007/'
 }
 
 test_sample = {

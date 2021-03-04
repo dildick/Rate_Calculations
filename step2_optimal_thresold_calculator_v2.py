@@ -130,12 +130,16 @@ comp_bkg_tot = len(comp_bkg)
 ## pick 5 values for each chamber
 ## use table 3 as a starting point
 comparator_seed = [
-    102, 60, 17, 41, 28, 39, 21, 38, 23
+    105, 61, 25, 40, 40, 40, 35, 45, 35
 ]
 
 comparator_delta = [
-    2, 2, 2, 2, 2, 2, 2, 2, 2
+    5, 5, 5, 5, 5, 5, 5, 5, 5
 ]
+
+#comparator_delta = [
+#    1, 1, 1, 1, 1, 1, 1, 1, 1
+#]
 
 comparator_width = [
     1, 1, 1, 1, 1, 1, 1, 1, 1
@@ -156,11 +160,11 @@ wire_width = [
 
 ## 9 variables
 ## each variable scans 10 points
-## 4 time bins
+## 3 time bins
 ## 2 types of hits
 ## 3 rate working points
 
-def generate_comp_range(station):
+def generate_range(station):
     return [i for i in xrange(comparator_seed[station] - comparator_width[station] * comparator_delta[station],
                     comparator_seed[station] + (comparator_width[station] + 1) * comparator_delta[station],
                     comparator_delta[station])]
@@ -237,7 +241,9 @@ S1, S2, S3, S4, S5, S6, S7, S8, S9 = 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 #thresholds = np.array()
 
-for i1 in tqdm(generate_range(0)):
+best_eff, best_idx = 0, 0
+
+for i1 in generate_range(0):
     for i2 in generate_range(1):
         for i3 in generate_range(2):
             for i4 in generate_range(3):
@@ -248,12 +254,18 @@ for i1 in tqdm(generate_range(0)):
                                 for i9 in generate_range(8):
                                     idx += 1
                                     #comp_rate = calculate_comp_rate_norm(i1, i2, i3, i4, i5, i6, i7, i8, i9)
-                                    wire_rate = calculate_wire_rate(i1, i2, i3, i4, i5, i6, i7, i8, i9)
-                                    if (0.74 < wire_rate and wire_rate < 0.76):
+                                    comp_rate = calculate_comp_rate_norm(i1, i2, i3, i4, i5, i6, i7, i8, i9)
+                                    if (0.24 < comp_rate and comp_rate < 0.26):
+                                        comp_eff = calculate_comp_efficiency_norm(i1, i2, i3, i4, i5, i6, i7, i8, i9)
+                                        if comp_eff > best_eff:
+                                            best_eff = comp_eff
+                                            best_idx = idx
+                                        if comp_eff > 0.29:
+                                            print idx, i1, i2, i3, i4, i5, i6, i7, i8, i9, "rate", comp_rate, "eff", comp_eff, "best", best_idx
+                                            #if (0.74 < wire_rate and wire_rate < 0.76):
+                                        #print("\tOK")
                                         #if (0.74 < comp_rate and comp_rate < 0.76) or (0.74 < wire_rate and wire_rate < 0.76):
                                         #comp_eff = calculate_comp_efficiency_norm(i1, i2, i3, i4, i5, i6, i7, i8, i9)
-                                        wire_eff = calculate_wire_efficiency_norm(i1, i2, i3, i4, i5, i6, i7, i8, i9)
-                                        print idx, i1, i2, i3, i4, i5, i6, i7, i8, i9, wire_rate, wire_eff
                                         #print idx, i1, i2, i3, i4, i5, i6, i7, i8, i9, comp_rate, wire_rate, comp_eff, wire_eff
                                         #If loss > current_max and loss < 100000:
                                         #loss = calculate_loss(i1, i2, i3, i4, i5, i6, i7, i8, i9)
@@ -264,7 +276,7 @@ for i1 in tqdm(generate_range(0)):
 #print current_max, S1, S2, S3, S4, S5, S6, S7, S8, S9
 #print "eff", calculate_comp_efficiency_norm(S1, S2, S3, S4, S5, S6, S7, S8, S9), "rate", calculate_comp_rate_norm(S1, S2, S3, S4, S5, S6, S7, S8, S9)
 
-
+print best_eff, best_idx
 
 
 exit(1)

@@ -59,23 +59,23 @@ comp_treename = 'comparator'
 wire_treename = 'wire'
 
 comp_chamber = [ 'Ev_max_nComp_ME11',
-             'Ev_max_nComp_ME12',
-             'Ev_max_nComp_ME13',
-             'Ev_max_nComp_ME21',
-             'Ev_max_nComp_ME22',
-             'Ev_max_nComp_ME31',
-             'Ev_max_nComp_ME32',
-             'Ev_max_nComp_ME41',
-             'Ev_max_nComp_ME42']
+                 'Ev_max_nComp_ME12',
+                 'Ev_max_nComp_ME13',
+                 'Ev_max_nComp_ME21',
+                 'Ev_max_nComp_ME22',
+                 'Ev_max_nComp_ME31',
+                 'Ev_max_nComp_ME32',
+                 'Ev_max_nComp_ME41',
+                 'Ev_max_nComp_ME42']
 wire_chamber = [ 'Ev_max_nWire_ME11',
-             'Ev_max_nWire_ME12',
-             'Ev_max_nWire_ME13',
-             'Ev_max_nWire_ME21',
-             'Ev_max_nWire_ME22',
-             'Ev_max_nWire_ME31',
-             'Ev_max_nWire_ME32',
-             'Ev_max_nWire_ME41',
-             'Ev_max_nWire_ME42']
+                 'Ev_max_nWire_ME12',
+                 'Ev_max_nWire_ME13',
+                 'Ev_max_nWire_ME21',
+                 'Ev_max_nWire_ME22',
+                 'Ev_max_nWire_ME31',
+                 'Ev_max_nWire_ME32',
+                 'Ev_max_nWire_ME41',
+                 'Ev_max_nWire_ME42']
 
 #all_chambers = [ 'Ev_nComp_ME11','Ev_nComp_ME12']
 
@@ -123,7 +123,151 @@ wire_bkg = arrs_wire_bkg.pandas.df(wire_chambers)
 print "Number of bkg events: %i" % (len(wire_bkg))
 print "Number of sig events: %i" % (len(wire_sig))
 
+comp_sig_tot = len(comp_sig)
+comp_bkg_tot = len(comp_bkg)
 
+## optimizing thresholds
+## pick 5 values for each chamber
+## use table 3 as a starting point
+comparator_seed = [
+    102, 60, 17, 41, 28, 39, 21, 38, 23
+]
+
+comparator_delta = [
+    2, 2, 2, 2, 2, 2, 2, 2, 2
+]
+
+comparator_width = [
+    1, 1, 1, 1, 1, 1, 1, 1, 1
+]
+
+
+wire_seed = [
+    102, 60, 17, 41, 28, 39, 21, 38, 23
+]
+
+wire_delta = [
+    2, 2, 2, 2, 2, 2, 2, 2, 2
+]
+
+wire_width = [
+    1, 1, 1, 1, 1, 1, 1, 1, 1
+]
+
+## 9 variables
+## each variable scans 10 points
+## 4 time bins
+## 2 types of hits
+## 3 rate working points
+
+def generate_comp_range(station):
+    return [i for i in xrange(comparator_seed[station] - comparator_width[station] * comparator_delta[station],
+                    comparator_seed[station] + (comparator_width[station] + 1) * comparator_delta[station],
+                    comparator_delta[station])]
+
+def generate_wire_range(station):
+    return [i for i in xrange(wire_seed[station] - wire_width[station] * wire_delta[station],
+                    wire_seed[station] + (wire_width[station] + 1) * wire_delta[station],
+                    wire_delta[station])]
+
+def calculate_comp_efficiency(T1, T2, T3, T4, T5, T6, T7, T8, T9):
+    return len(comp_sig[(comp_sig['Ev_max_nComp_ME11'] > T1) |
+                        (comp_sig['Ev_max_nComp_ME12'] > T2) |
+                        (comp_sig['Ev_max_nComp_ME13'] > T3) |
+                        (comp_sig['Ev_max_nComp_ME21'] > T4) |
+                        (comp_sig['Ev_max_nComp_ME22'] > T5) |
+                        (comp_sig['Ev_max_nComp_ME31'] > T6) |
+                        (comp_sig['Ev_max_nComp_ME32'] > T7) |
+                        (comp_sig['Ev_max_nComp_ME41'] > T8) |
+                        (comp_sig['Ev_max_nComp_ME41'] > T9)])
+
+def calculate_comp_efficiency_norm(T1, T2, T3, T4, T5, T6, T7, T8, T9):
+    return calculate_comp_efficiency(T1, T2, T3, T4, T5, T6, T7, T8, T9)/ comp_sig_tot
+
+def calculate_wire_efficiency(T1, T2, T3, T4, T5, T6, T7, T8, T9):
+    return len(wire_sig[(wire_sig['Ev_max_nWire_ME11'] > T1) |
+                        (wire_sig['Ev_max_nWire_ME12'] > T2) |
+                        (wire_sig['Ev_max_nWire_ME13'] > T3) |
+                        (wire_sig['Ev_max_nWire_ME21'] > T4) |
+                        (wire_sig['Ev_max_nWire_ME22'] > T5) |
+                        (wire_sig['Ev_max_nWire_ME31'] > T6) |
+                        (wire_sig['Ev_max_nWire_ME32'] > T7) |
+                        (wire_sig['Ev_max_nWire_ME41'] > T8) |
+                        (wire_sig['Ev_max_nWire_ME41'] > T9)])
+
+def calculate_wire_efficiency_norm(T1, T2, T3, T4, T5, T6, T7, T8, T9):
+    return calculate_wire_efficiency(T1, T2, T3, T4, T5, T6, T7, T8, T9) / wire_sig_tot
+
+def calculate_comp_rate(T1, T2, T3, T4, T5, T6, T7, T8, T9):
+    return len(comp_bkg[(comp_bkg['Ev_max_nComp_ME11'] > T1) |
+                        (comp_bkg['Ev_max_nComp_ME12'] > T2) |
+                        (comp_bkg['Ev_max_nComp_ME13'] > T3) |
+                        (comp_bkg['Ev_max_nComp_ME21'] > T4) |
+                        (comp_bkg['Ev_max_nComp_ME22'] > T5) |
+                        (comp_bkg['Ev_max_nComp_ME31'] > T6) |
+                        (comp_bkg['Ev_max_nComp_ME32'] > T7) |
+                        (comp_bkg['Ev_max_nComp_ME41'] > T8) |
+                        (comp_bkg['Ev_max_nComp_ME42'] > T9)])
+
+def calculate_wire_rate(T1, T2, T3, T4, T5, T6, T7, T8, T9):
+    return len(wire_bkg[(wire_bkg['Ev_max_nWire_ME11'] > T1) |
+                        (wire_bkg['Ev_max_nWire_ME12'] > T2) |
+                        (wire_bkg['Ev_max_nWire_ME13'] > T3) |
+                        (wire_bkg['Ev_max_nWire_ME21'] > T4) |
+                        (wire_bkg['Ev_max_nWire_ME22'] > T5) |
+                        (wire_bkg['Ev_max_nWire_ME31'] > T6) |
+                        (wire_bkg['Ev_max_nWire_ME32'] > T7) |
+                        (wire_bkg['Ev_max_nWire_ME41'] > T8) |
+                        (wire_bkg['Ev_max_nWire_ME42'] > T9)])
+
+def calculate_comp_rate_norm(T1, T2, T3, T4, T5, T6, T7, T8, T9):
+    return calculate_comp_rate(T1, T2, T3, T4, T5, T6, T7, T8, T9) / comp_bkg_tot*32*1000
+
+def calculate_wire_rate_norm(T1, T2, T3, T4, T5, T6, T7, T8, T9):
+    return calculate_wire_rate(T1, T2, T3, T4, T5, T6, T7, T8, T9) / wire_bkg_tot*32*1000
+
+def calculate_loss(T1, T2, T3, T4, T5, T6, T7, T8, T9):
+    return (calculate_comp_efficiency(T1, T2, T3, T4, T5, T6, T7, T8, T9)/np.sqrt(calculate_comp_rate(T1, T2, T3, T4, T5, T6, T7, T8, T9)))
+
+print comp_sig_tot, comp_bkg_tot
+
+idx = 0
+current_max = 0
+S1, S2, S3, S4, S5, S6, S7, S8, S9 = 0, 0, 0, 0, 0, 0, 0, 0, 0
+
+#thresholds = np.array()
+
+for i1 in tqdm(generate_range(0)):
+    for i2 in generate_range(1):
+        for i3 in generate_range(2):
+            for i4 in generate_range(3):
+                for i5 in generate_range(4):
+                    for i6 in generate_range(5):
+                        for i7 in generate_range(6):
+                            for i8 in generate_range(7):
+                                for i9 in generate_range(8):
+                                    idx += 1
+                                    #comp_rate = calculate_comp_rate_norm(i1, i2, i3, i4, i5, i6, i7, i8, i9)
+                                    wire_rate = calculate_wire_rate(i1, i2, i3, i4, i5, i6, i7, i8, i9)
+                                    if (0.74 < wire_rate and wire_rate < 0.76):
+                                        #if (0.74 < comp_rate and comp_rate < 0.76) or (0.74 < wire_rate and wire_rate < 0.76):
+                                        #comp_eff = calculate_comp_efficiency_norm(i1, i2, i3, i4, i5, i6, i7, i8, i9)
+                                        wire_eff = calculate_wire_efficiency_norm(i1, i2, i3, i4, i5, i6, i7, i8, i9)
+                                        print idx, i1, i2, i3, i4, i5, i6, i7, i8, i9, wire_rate, wire_eff
+                                        #print idx, i1, i2, i3, i4, i5, i6, i7, i8, i9, comp_rate, wire_rate, comp_eff, wire_eff
+                                        #If loss > current_max and loss < 100000:
+                                        #loss = calculate_loss(i1, i2, i3, i4, i5, i6, i7, i8, i9)
+
+                                        #    current_max = loss
+                                        #    S1, S2, S3, S4, S5, S6, S7, S8, S9 = i1, i2, i3, i4, i5, i6, i7, i8, i9
+
+#print current_max, S1, S2, S3, S4, S5, S6, S7, S8, S9
+#print "eff", calculate_comp_efficiency_norm(S1, S2, S3, S4, S5, S6, S7, S8, S9), "rate", calculate_comp_rate_norm(S1, S2, S3, S4, S5, S6, S7, S8, S9)
+
+
+
+
+exit(1)
 
 min_=0
 max_=150
@@ -164,9 +308,7 @@ wireXX = [0,0,0,0,0,0,0,0,0]
 for inc in range(len(comp_chamber)):
 
     comp_efficiency=[0]
-    comp_sig_tot = len(comp_sig)
     comp_rate=[0]
-    comp_bkg_tot = len(comp_bkg)
     comp_limits=[0]
     best = 0.0
     best_cut = 149
